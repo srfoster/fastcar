@@ -2,24 +2,11 @@
 
 (require meta-engine)
 
-(require (only-in dtc/frames/animations napoleon/turk) 
-         2htdp/image "./show-cards.rkt")   
+(require  2htdp/image "./show-cards.rkt"
+         "./chess.rkt")
         
-(define (my-star color)
-  (register-sprite (star 40 'solid color)))
-
-
-(define sprite-list
-  (list 
-    (register-sprite (napoleon/turk 1))
-    (register-sprite (napoleon/turk 2))
-    (register-sprite (napoleon/turk 3))
-    (register-sprite (napoleon/turk 4))
-    (my-star "red")
-    (my-star "orange")
-    (my-star "yellow")
-    (my-star "green")
-    (my-star "blue")))
-
+;TODO: Make rchess cache these...
+;TODO: Add the correct responses
+;  Test self.
+;  Move chess cards to a better organized folder
                                                                            
-(play! (game (show-cards #:delay 100 sprite-list)))   
